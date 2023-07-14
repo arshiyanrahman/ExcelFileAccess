@@ -1,0 +1,28 @@
+<h1 class="text-center text-primary uploadh1">Upload File</h1>
+<hr>
+    <div class=" m-5 upload">
+
+        <input type="file" class="text-primary" (change)="selectFile($event)">
+
+        <button class="btn btn-primary" (click)="uploadFile()">submit</button>
+    </div>
+
+<h1 class="text-center text-primary">Records in Database</h1>
+<hr>
+    <div class="mt-5">
+        <table class="table table-bordered">
+            <thead>
+                <th>BookId</th>
+                <th>BookName</th>
+                <th>BookDesc</th>
+                <th>BookPrice</th>
+
+            </thead>
+            <tr *ngFor="let excelData of excelDetails">
+                <td>{{excelData.bookId}} </td>
+                <td>{{excelData.bookName}}</td>
+                <td>{{excelData.bookDesc}}</td>
+                <td>{{excelData.bookPrice}}</td>
+            </tr>
+        </table>
+    </div>
