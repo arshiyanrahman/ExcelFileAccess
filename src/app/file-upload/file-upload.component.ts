@@ -13,11 +13,6 @@ export class FileUploadComponent {
   file : any;
   excelDetails : BookDetails[] | undefined =[] ;
   ngOnInit(){
-  //   console.log("ngOnInit");
-  //  this.excelService.getAllExcelData().subscribe((resp : BookDetails[])=>{
-  // this.excelDetails  = resp;
-      
-  //   });
 
   // displaying all the books stored in db   
     this.getAll();
